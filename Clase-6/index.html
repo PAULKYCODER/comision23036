@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="titulo">Titulo de nuestro Web</h1>
+    <p class="parrafo"> Esto es un parrafo</p>
+    <p class="parrafo"> Esto es un parrafo2</p>
+
+    <div id="miDiv" class="miDiv">Textoo</div>
+
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ul>
+
+
+    <button onclick="alert('Hiciste click en el boton')">Hacer Click</button>
+    
+    <button id="miBoton">Hacer Click con ID</button>
+
+    <button id="buttonEventListener">Hacer Click EventListener</button>
+    
+<script>
+    let title = document.getElementById('titulo');
+    console.log(title);
+    title.textContent = "Hola Mundo";
+     
+    let p = document.getElementsByClassName('parrafo');
+    console.log(p);
+
+    let div = document.querySelector('.miDiv');
+    div.style.backgroundColor = 'blue';
+
+    let lista = document.querySelectorAll('li');
+    lista.forEach(elem =>{
+        elem.textContent += 'Modificado';
+    });
+
+    let miDiv = document.getElementById('miDiv');
+    let parrafo = document.createElement('h2');
+    parrafo.textContent = 'lorem esto es un parrafo lorem';
+    miDiv.appendChild(parrafo)
+
+    let button = document.getElementById('miBoton');
+    button.onclick = function(){
+        alert('Hiciste click en el boton de ID');
+    }
+
+    let buttonEventListener = document.getElementById('buttonEventListener');
+    buttonEventListener.addEventListener('click', function(){
+        alert('Hiciste click en el boton de buttonEventListener');  
+        buttonEventListener.disabled = true;
+        
+    });
+    
+    
+    
+</script>
+</body>
+</html>
