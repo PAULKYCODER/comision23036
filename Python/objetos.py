@@ -49,7 +49,7 @@ for prod in lista_producto:
 nuevo_precio = float(input('Ingrese el precio para el hot sale'))
 codigo = int(input('Ingrese el codigo del producto a modificar'))
 modificar_producto(lista_producto,codigo,nuevo_precio)
-
+prod2.__del__()
 print('Lista de precios en Hot Sale')
 
 for prod in lista_producto:
